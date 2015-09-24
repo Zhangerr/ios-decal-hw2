@@ -11,9 +11,11 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var image: UIImage!
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.becomeFirstResponder()
+        
     }
 
     override func didReceiveMemoryWarning() {
