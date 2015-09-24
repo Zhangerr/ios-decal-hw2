@@ -55,10 +55,10 @@ class KeyboardViewController: UIInputViewController {
         self.textDocumentProxy.insertText("\n")
         
 //        UIPasteboard.generalPasteboard().setData(data!, forPasteboardType: "logo-eecs.jpg");
-        let image =         UIImage(named: "logo-eecs");
+   //     let image =         UIImage(named: "logo-eecs");
 
 //        UIPasteboard.generalPasteboard().string = "hello world";
-        UIPasteboard.generalPasteboard().image = image;
+     //   UIPasteboard.generalPasteboard().image = image;
 
     }
     func loadInterface() {
