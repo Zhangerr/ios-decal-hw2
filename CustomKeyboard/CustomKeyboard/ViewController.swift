@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var textField: UITextField!
-    @IBOutlet weak var image: UIImage!
+    @IBOutlet weak var image: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         textField.becomeFirstResponder()

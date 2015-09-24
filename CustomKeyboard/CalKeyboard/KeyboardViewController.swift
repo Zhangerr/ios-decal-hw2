@@ -15,6 +15,11 @@ class KeyboardViewController: UIInputViewController {
     @IBOutlet var deleteKeyboardButton: UIButton!
     @IBOutlet var returnKeyboardButton: UIButton!
     @IBOutlet var img: UIImage!
+    
+    @IBAction func buttonAction(sender: UIButton) {
+        self.textDocumentProxy.insertText((sender.titleLabel?.text)!);
+    }
+    
     var keyboardView: UIView!
 
     override func updateViewConstraints() {
@@ -41,7 +46,7 @@ class KeyboardViewController: UIInputViewController {
         // The app has just changed the document's contents, the document context has been updated.
     }
     func test() {
-        self.textDocumentProxy.insertText("EECS");
+      //  self.textDocumentProxy.insertText("EECS");
     }
     func backspace() {
         self.textDocumentProxy.deleteBackward();
@@ -64,8 +69,10 @@ class KeyboardViewController: UIInputViewController {
         view.backgroundColor = keyboardView.backgroundColor
         nextKeyboardButton.addTarget(self, action: "advanceToNextInputMode", forControlEvents: .TouchUpInside) // advanceToNextInputMode is already defined in template
         testKeyboardButton.addTarget(self, action: "test", forControlEvents: .TouchUpInside);
-        deleteKeyboardButton.addTarget(self, action: "backspace", forControlEvents: .TouchUpInside)
+        deleteKeyboardButton.addTarget(self, action: "backspace", forControlEvents: .TouchDown)
         returnKeyboardButton.addTarget(self, action: "returnKey", forControlEvents: .TouchUpInside);
+
+
     }
 
 

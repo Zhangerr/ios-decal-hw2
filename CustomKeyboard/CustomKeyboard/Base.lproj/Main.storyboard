@@ -48,6 +48,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="image" destination="2RX-aM-cpt" id="sar-w9-Utv"/>
                         <outlet property="textField" destination="hTJ-8E-ODA" id="hf2-nk-UdX"/>
                     </connections>
                 </viewController>
